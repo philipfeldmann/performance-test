@@ -1,0 +1,23 @@
+modules:
+  confluence:globalPage:
+    - key: performance-test-hello-world
+      resource: main
+      title: performance test
+      route: performance-test
+  global:fullPage:
+    - key: performance-test-full-page
+      resource: main
+      title: performance test
+      routePrefix: performance-test
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/aeaa9f64-2d59-4a32-8395-9b9a296cd060
+  compatibility:
+    confluence:
+      required: true
